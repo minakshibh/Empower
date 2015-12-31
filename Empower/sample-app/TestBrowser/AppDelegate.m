@@ -13,6 +13,7 @@
 #import "AppDelegate.h"
 #import "BrowserViewController.h"
 
+static NSString *const AppGroupId = @"group.empowerExtention";
 @implementation AppDelegate
 
 @synthesize window,prevAddress;
@@ -35,6 +36,13 @@
     UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:self.viewController];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
+    
+    
+    sharedUserDefaults = [[NSUserDefaults alloc] initWithSuiteName:AppGroupId];
+    arrSites = [NSMutableArray arrayWithArray:[sharedUserDefaults valueForKey:@"SharedExtension"]];
+    
+    
+    
     return YES;
 }
 

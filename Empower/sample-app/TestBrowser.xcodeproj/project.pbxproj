@@ -17,6 +17,9 @@
 		B572E55D18D08D2A005E4834 /* BookmarkImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = B572E55318D08D2A005E4834 /* BookmarkImporter.m */; };
 		B572E55E18D08D2A005E4834 /* BookmarkItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B572E55518D08D2A005E4834 /* BookmarkItem.m */; };
 		B5A210C218D091F700D65141 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A210C118D091F700D65141 /* Reachability.m */; };
+		D9154EED1C33EFCA00FE0E6E /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9154EEC1C33EFCA00FE0E6E /* ShareViewController.m */; };
+		D9154EF01C33EFCA00FE0E6E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9154EEE1C33EFCA00FE0E6E /* MainInterface.storyboard */; };
+		D9154EF41C33EFCA00FE0E6E /* Empower2.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D9154EE91C33EFCA00FE0E6E /* Empower2.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D965B81B1BE89A4A0075FE50 /* 29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = D965B80E1BE89A4A0075FE50 /* 29x29.png */; };
 		D965B81C1BE89A4A0075FE50 /* 40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = D965B80F1BE89A4A0075FE50 /* 40x40.png */; };
 		D965B81D1BE89A4A0075FE50 /* 58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = D965B8101BE89A4A0075FE50 /* 58x58.png */; };
@@ -78,6 +81,30 @@
 		FAF75EED18A17BFD007B317D /* JSTools.js in Sources */ = {isa = PBXBuildFile; fileRef = FAF75EE118A17BFD007B317D /* JSTools.js */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D9154EF21C33EFCA00FE0E6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC9B25216F27BF800E37710 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9154EE81C33EFCA00FE0E6E;
+			remoteInfo = Empower2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D9154EF81C33EFCA00FE0E6E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D9154EF41C33EFCA00FE0E6E /* Empower2.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		71ED23B4194470B2002ACD24 /* BrowserDelegate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = BrowserDelegate.h; path = ../Browser/BrowserDelegate.h; sourceTree = "<group>"; };
 		71ED23B5194470B2002ACD24 /* BrowserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BrowserDelegate.m; path = ../Browser/BrowserDelegate.m; sourceTree = "<group>"; };
@@ -99,6 +126,14 @@
 		B572E55618D08D2A005E4834 /* BookmarksController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookmarksController.h; path = ../Browser/BookmarksController.h; sourceTree = "<group>"; };
 		B5A210C018D091F700D65141 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = ../Browser/Reachability.h; sourceTree = "<group>"; };
 		B5A210C118D091F700D65141 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = ../Browser/Reachability.m; sourceTree = "<group>"; };
+		D9154EE91C33EFCA00FE0E6E /* Empower2.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Empower2.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9154EEB1C33EFCA00FE0E6E /* ShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		D9154EEC1C33EFCA00FE0E6E /* ShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		D9154EEF1C33EFCA00FE0E6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		D9154EF11C33EFCA00FE0E6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D95733CE1C34F1CF0043DF54 /* Empower2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Empower2.entitlements; sourceTree = "<group>"; };
+		D95733CF1C34F2380043DF54 /* TestBrowser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TestBrowser.entitlements; sourceTree = "<group>"; };
+		D95733D01C35128E0043DF54 /* DemoSharedCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoSharedCode.h; sourceTree = "<group>"; };
 		D965B80E1BE89A4A0075FE50 /* 29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 29x29.png; sourceTree = "<group>"; };
 		D965B80F1BE89A4A0075FE50 /* 40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 40x40.png; sourceTree = "<group>"; };
 		D965B8101BE89A4A0075FE50 /* 58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 58x58.png; sourceTree = "<group>"; };
@@ -169,6 +204,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D9154EE61C33EFCA00FE0E6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAC9B25716F27BF800E37710 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -186,6 +228,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D9154EEA1C33EFCA00FE0E6E /* Empower2 */ = {
+			isa = PBXGroup;
+			children = (
+				D95733CE1C34F1CF0043DF54 /* Empower2.entitlements */,
+				D9154EEB1C33EFCA00FE0E6E /* ShareViewController.h */,
+				D9154EEC1C33EFCA00FE0E6E /* ShareViewController.m */,
+				D9154EEE1C33EFCA00FE0E6E /* MainInterface.storyboard */,
+				D9154EF11C33EFCA00FE0E6E /* Info.plist */,
+			);
+			path = Empower2;
+			sourceTree = "<group>";
+		};
 		D965B80D1BE89A3E0075FE50 /* icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,12 +292,14 @@
 		FAC9B25116F27BF800E37710 = {
 			isa = PBXGroup;
 			children = (
+				D95733D01C35128E0043DF54 /* DemoSharedCode.h */,
 				FAF75E8018A17A59007B317D /* Browser Resources */,
 				FAF75E6A18A179D1007B317D /* Browser */,
 				FAC9B3B816F38D3700E37710 /* SystemConfiguration.framework */,
 				FAC9B3B416F38C6500E37710 /* CoreData.framework */,
 				FAC9B3B016F3863500E37710 /* libxml2.2.dylib */,
 				FAC9B26316F27BF800E37710 /* TestBrowser */,
+				D9154EEA1C33EFCA00FE0E6E /* Empower2 */,
 				FAC9B25C16F27BF800E37710 /* Frameworks */,
 				FAC9B25B16F27BF800E37710 /* Products */,
 			);
@@ -253,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				FAC9B25A16F27BF800E37710 /* TestBrowser.app */,
+				D9154EE91C33EFCA00FE0E6E /* Empower2.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -271,6 +328,7 @@
 		FAC9B26316F27BF800E37710 /* TestBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				D95733CF1C34F2380043DF54 /* TestBrowser.entitlements */,
 				D9BE2F5B1BE7316E00222827 /* Icon */,
 				FAC9B26C16F27BF800E37710 /* AppDelegate.h */,
 				FAC9B26D16F27BF800E37710 /* AppDelegate.m */,
@@ -372,6 +430,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D9154EE81C33EFCA00FE0E6E /* Empower2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9154EF71C33EFCA00FE0E6E /* Build configuration list for PBXNativeTarget "Empower2" */;
+			buildPhases = (
+				D9154EE51C33EFCA00FE0E6E /* Sources */,
+				D9154EE61C33EFCA00FE0E6E /* Frameworks */,
+				D9154EE71C33EFCA00FE0E6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Empower2;
+			productName = Empower2;
+			productReference = D9154EE91C33EFCA00FE0E6E /* Empower2.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		FAC9B25916F27BF800E37710 /* TestBrowser */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAC9B28016F27BF800E37710 /* Build configuration list for PBXNativeTarget "TestBrowser" */;
@@ -379,10 +454,12 @@
 				FAC9B25616F27BF800E37710 /* Sources */,
 				FAC9B25716F27BF800E37710 /* Frameworks */,
 				FAC9B25816F27BF800E37710 /* Resources */,
+				D9154EF81C33EFCA00FE0E6E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D9154EF31C33EFCA00FE0E6E /* PBXTargetDependency */,
 			);
 			name = TestBrowser;
 			productName = TestBrowser;
@@ -398,8 +475,22 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Alexandru Catighera";
 				TargetAttributes = {
+					D9154EE81C33EFCA00FE0E6E = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = T5DY39F2BR;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					FAC9B25916F27BF800E37710 = {
 						DevelopmentTeam = T5DY39F2BR;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -409,6 +500,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = FAC9B25116F27BF800E37710;
 			productRefGroup = FAC9B25B16F27BF800E37710 /* Products */;
@@ -416,11 +508,20 @@
 			projectRoot = "";
 			targets = (
 				FAC9B25916F27BF800E37710 /* TestBrowser */,
+				D9154EE81C33EFCA00FE0E6E /* Empower2 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D9154EE71C33EFCA00FE0E6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9154EF01C33EFCA00FE0E6E /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAC9B25816F27BF800E37710 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -474,6 +575,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D9154EE51C33EFCA00FE0E6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9154EED1C33EFCA00FE0E6E /* ShareViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAC9B25616F27BF800E37710 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -502,7 +611,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		D9154EF31C33EFCA00FE0E6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9154EE81C33EFCA00FE0E6E /* Empower2 */;
+			targetProxy = D9154EF21C33EFCA00FE0E6E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		D9154EEE1C33EFCA00FE0E6E /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9154EEF1C33EFCA00FE0E6E /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		FAC9B26616F27BF800E37710 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -514,6 +639,71 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D9154EF51C33EFCA00FE0E6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = Empower2/Empower2.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = Empower2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Krishnais.dash.Empower2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D9154EF61C33EFCA00FE0E6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = Empower2/Empower2.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = Empower2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Krishnais.dash.Empower2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		FAC9B27E16F27BF800E37710 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -581,14 +771,15 @@
 		FAC9B28116F27BF800E37710 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Rocky Uppal (3R7VB3H8QT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rocky Uppal (3R7VB3H8QT)";
+				CODE_SIGN_ENTITLEMENTS = TestBrowser/TestBrowser.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestBrowser/TestBrowser-Prefix.pch";
 				INFOPLIST_FILE = "TestBrowser/TestBrowser-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "add5a31c-1032-4e73-be57-3b9e5448c7c9";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -596,14 +787,15 @@
 		FAC9B28216F27BF800E37710 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Rocky Uppal (T5DY39F2BR)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Rocky Uppal (T5DY39F2BR)";
+				CODE_SIGN_ENTITLEMENTS = TestBrowser/TestBrowser.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestBrowser/TestBrowser-Prefix.pch";
 				INFOPLIST_FILE = "TestBrowser/TestBrowser-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b4ea78c2-87d7-4b8d-9e93-71b73fa4d377";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -611,6 +803,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D9154EF71C33EFCA00FE0E6E /* Build configuration list for PBXNativeTarget "Empower2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9154EF51C33EFCA00FE0E6E /* Debug */,
+				D9154EF61C33EFCA00FE0E6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FAC9B25516F27BF800E37710 /* Build configuration list for PBXProject "TestBrowser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

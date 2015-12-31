@@ -16,7 +16,10 @@
 @class BrowserViewController;
 
 @interface AppDelegate : BrowserDelegate <UIApplicationDelegate>
-
+{
+    NSMutableArray *arrSites;
+    NSUserDefaults *sharedUserDefaults;
+}
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) NSString *prevAddress;
 @property (strong, nonatomic) BrowserViewController *viewController;
