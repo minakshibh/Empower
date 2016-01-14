@@ -57,13 +57,13 @@ typedef enum ScrollDirection {
 
 - (void)viewDidLoad
 {
-    
+    [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyAlways];
     [[self navigationController] setNavigationBarHidden:NO animated:NO];
     j=0;
     i=0;
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
 //    [user removeObjectForKey:@"URL"];
-//    [user setObject:@"" forKey:@"URL"];
+    [user setObject:@"https://educate.adams50.org/Educate/iFrame.aspx?iCtrl=PLAYLIST_HOME_CLASS" forKey:@"URL"];
     
    // @"https://educate.adams50.org/Educate/iFrame.aspx?iCtrl=PLAYLIST_HOME_CLASS";
     
@@ -206,10 +206,12 @@ typedef enum ScrollDirection {
 - (void) viewWillAppear:(BOOL)animated {
     //[refreshButton setHidden:YES];
     [super viewWillAppear:animated];
+    
 }
 
 -(void) viewWillDisappear:(BOOL)animated {
 	[self.navigationController setNavigationBarHidden:NO animated:animated];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -356,14 +358,74 @@ typedef enum ScrollDirection {
 
 
 // Web methods
-
+#pragma mark- delegate webview
+- (void)saveCookies
+{
+    NSMutableArray *cookieArray = [[NSMutableArray alloc] init];
+    for (NSHTTPCookie *cookie in [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]) {
+        [cookieArray addObject:cookie.name];
+        NSMutableDictionary *cookieProperties = [NSMutableDictionary dictionary];
+        [cookieProperties setObject:cookie.name forKey:NSHTTPCookieName];
+        [cookieProperties setObject:cookie.value forKey:NSHTTPCookieValue];
+        [cookieProperties setObject:cookie.domain forKey:NSHTTPCookieDomain];
+        [cookieProperties setObject:cookie.path forKey:NSHTTPCookiePath];
+        [cookieProperties setObject:[NSNumber numberWithInt:cookie.version] forKey:NSHTTPCookieVersion];
+        
+        [cookieProperties setObject:[[NSDate date] dateByAddingTimeInterval:2629743] forKey:NSHTTPCookieExpires];
+        
+        [[NSUserDefaults standardUserDefaults] setValue:cookieProperties forKey:cookie.name];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setValue:cookieArray forKey:@"cookieArray"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+- (void)loadCookies
+{
+    NSArray             *cookies       = [NSKeyedUnarchiver unarchiveObjectWithData: [[NSUserDefaults standardUserDefaults] objectForKey: @"cookies"]];
+    NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    
+    for (NSHTTPCookie *cookie in cookies)
+    {
+        [cookieStorage setCookie: cookie];
+    }
+}
+- (NSURLRequest*)addCookies:(NSArray *)cookies forRequest:(NSURLRequest *)request
+{
+    NSMutableURLRequest *mutableRequest = [request mutableCopy];
+    if ([cookies count] > 0)
+    {
+        NSHTTPCookie *cookie;
+        NSString *cookieHeader = nil;
+        for (cookie in cookies)
+        {
+            if (!cookieHeader)
+            {
+                cookieHeader = [NSString stringWithFormat: @"%@=%@",[cookie name],[cookie value]];
+            }
+            else
+            {
+                cookieHeader = [NSString stringWithFormat: @"%@; %@=%@",cookieHeader,[cookie name],[cookie value]];
+            }
+        }
+        if (cookieHeader)
+        {
+            [mutableRequest setValue:cookieHeader forHTTPHeaderField:@"Cookie"];
+        }
+        
+        return [mutableRequest copy];
+    }
+    
+    return nil;
+}
 - (void) currentWebViewDidStartLoading:(UIWebView *) webView  {
     if (addressBar.editing) {
         [webView stopLoading];
         return;
     }
     
-    
+    NSURL *url = [webView.request URL];
     Tab *tab = nil;
     for (id cTab in tabs) {
         if ([cTab webView] == webView) {
@@ -389,6 +451,7 @@ typedef enum ScrollDirection {
     [progressBar setHidden:YES];
     
     [stopButton setHidden:YES];
+    [self loadCookies];
     
     NSURL *url = [webView.request URL];
     if ([url isFileURL] || [[url absoluteString] isEqualToString:@"about:blank"]) {
@@ -455,7 +518,7 @@ typedef enum ScrollDirection {
         [self cannotConnect:nil];
         
     }
-    
+    [self saveCookies];
     [addressBar resignFirstResponder];
 }
 

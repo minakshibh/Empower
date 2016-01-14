@@ -33,6 +33,7 @@
 		D965B8251BE89A4A0075FE50 /* 1024x1024 iOS-app-icon-template4.png in Resources */ = {isa = PBXBuildFile; fileRef = D965B8181BE89A4A0075FE50 /* 1024x1024 iOS-app-icon-template4.png */; };
 		D965B8261BE89A4A0075FE50 /* 1024x1024 iOS-app-icon-template5.png in Resources */ = {isa = PBXBuildFile; fileRef = D965B8191BE89A4A0075FE50 /* 1024x1024 iOS-app-icon-template5.png */; };
 		D965B8271BE89A4A0075FE50 /* 1024x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = D965B81A1BE89A4A0075FE50 /* 1024x1024.png */; };
+		D98A5C261C3A8568007E641C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98A5C251C3A8568007E641C /* MobileCoreServices.framework */; };
 		D9BE2F591BE7315C00222827 /* firstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BE2F571BE7315C00222827 /* firstViewController.m */; };
 		D9BE2F5A1BE7315C00222827 /* firstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BE2F581BE7315C00222827 /* firstViewController.xib */; };
 		D9BE2F5D1BE7317600222827 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = D9BE2F5C1BE7317600222827 /* setting.png */; };
@@ -147,6 +148,7 @@
 		D965B8181BE89A4A0075FE50 /* 1024x1024 iOS-app-icon-template4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1024x1024 iOS-app-icon-template4.png"; sourceTree = "<group>"; };
 		D965B8191BE89A4A0075FE50 /* 1024x1024 iOS-app-icon-template5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1024x1024 iOS-app-icon-template5.png"; sourceTree = "<group>"; };
 		D965B81A1BE89A4A0075FE50 /* 1024x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1024x1024.png; sourceTree = "<group>"; };
+		D98A5C251C3A8568007E641C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D9BE2F561BE7315C00222827 /* firstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = firstViewController.h; sourceTree = "<group>"; };
 		D9BE2F571BE7315C00222827 /* firstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = firstViewController.m; sourceTree = "<group>"; };
 		D9BE2F581BE7315C00222827 /* firstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = firstViewController.xib; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D98A5C261C3A8568007E641C /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +302,6 @@
 				FAC9B3B416F38C6500E37710 /* CoreData.framework */,
 				FAC9B3B016F3863500E37710 /* libxml2.2.dylib */,
 				FAC9B26316F27BF800E37710 /* TestBrowser */,
-				D9154EEA1C33EFCA00FE0E6E /* Empower2 */,
 				FAC9B25C16F27BF800E37710 /* Frameworks */,
 				FAC9B25B16F27BF800E37710 /* Products */,
 			);
@@ -317,6 +319,8 @@
 		FAC9B25C16F27BF800E37710 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D98A5C251C3A8568007E641C /* MobileCoreServices.framework */,
+				D9154EEA1C33EFCA00FE0E6E /* Empower2 */,
 				D9BE2F651BE7341200222827 /* QuartzCore.framework */,
 				FAC9B25D16F27BF800E37710 /* UIKit.framework */,
 				FAC9B25F16F27BF800E37710 /* Foundation.framework */,

@@ -21,6 +21,23 @@ static NSString *const AppGroupId = @"group.empowerExtention";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
+    NSMutableArray* cookieDictionary = [[NSUserDefaults standardUserDefaults] valueForKey:@"cookieArray"];
+    NSLog(@"cookie dictionary found is %@",cookieDictionary);
+    
+    for (int i=0; i < cookieDictionary.count; i++)
+    {
+        
+        
+        NSLog(@"cookie found is %@",[cookieDictionary objectAtIndex:i]);
+        NSMutableDictionary* cookieDictionary1 = [[NSUserDefaults standardUserDefaults] valueForKey:[cookieDictionary objectAtIndex:i]];
+        NSHTTPCookie *cookie = [NSHTTPCookie cookieWithProperties:cookieDictionary1];
+        [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:cookie];
+        
+        
+    }
+    
+    
+    
 //    viewController = [[BrowserViewController alloc]initWithNibName:@"SecondViewController" bundle:nil];
 //    UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:FVC];
 //    
@@ -72,7 +89,18 @@ static NSString *const AppGroupId = @"group.empowerExtention";
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    // handler code here
+    
+    NSLog(@"url recieved: %@", url);
+    NSLog(@"query string: %@", [url query]);
+    NSLog(@"host: %@", [url host]);
+    NSLog(@"url path: %@", [url path]);
+    
+    
 
+    return YES;
+}
 
 
 

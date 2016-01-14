@@ -13,7 +13,7 @@
 {
     
         NSUserDefaults *sharedUserDefaults;
-        NSExtensionItem *inputItem;
+//        NSExtensionItem *inputItem;
     
 }
 @end

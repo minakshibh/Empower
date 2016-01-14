@@ -7,9 +7,12 @@
 //
 
 #import "ShareViewController.h"
+#import <MobileCoreServices/MobileCoreServices.h>
+
 @import MobileCoreServices;
 
 static NSString *const AppGroupId = @"group.empowerExtention";
+static NSString *const APP_SHARE_URL_SCHEME = @"com.empower";
 
 @interface ShareViewController ()
 {
@@ -30,109 +33,106 @@ static NSString *const AppGroupId = @"group.empowerExtention";
 }
 
 - (void)didSelectPost {
-    // This is called after the user selects Post. Do the upload of contentText and/or NSExtensionContext attachments.
-    
-    // Inform the host that we're done, so it un-blocks its UI. Note: Alternatively you could call super's -didSelectPost, which will similarly complete the extension context.
- //--->   [self.extensionContext completeRequestReturningItems:@[] completionHandler:nil];
+   
     
     
-    inputItem = self.extensionContext.inputItems.firstObject;
-    NSItemProvider *urlItemProvider = [[inputItem.userInfo valueForKey:NSExtensionItemAttachmentsKey] objectAtIndex:0];
-    if ([urlItemProvider hasItemConformingToTypeIdentifier:(__bridge NSString *)kUTTypeURL])
-    {
-        [urlItemProvider loadItemForTypeIdentifier:(__bridge NSString *)kUTTypeURL options:nil completionHandler:^(NSURL *url, NSError *error)
+    NSExtensionItem *item1 = self.extensionContext.inputItems.firstObject;
+    NSItemProvider *itemProvider = item1.attachments.firstObject;
+    
+    NSData *data = item1.attachments.firstObject;
+    NSLog(@"%@",data);
+    NSArray *arrayStr = [[NSString stringWithFormat:@"%@",data] componentsSeparatedByString:@"\""];
+    NSString *val = [NSString stringWithFormat:@"%@",[arrayStr objectAtIndex:1]];
+    
+        if([itemProvider hasItemConformingToTypeIdentifier:val])
         {
-            if (error)
+            [itemProvider loadItemForTypeIdentifier:val options:nil completionHandler:
+            ^(id<NSSecureCoding> item2, NSError *error)
             {
-                NSLog(@"Error occured");
-            }
-            else
-            {
-                NSMutableArray *arrSites;
-                if ([sharedUserDefaults valueForKey:@"SharedExtension"])
-                    arrSites = [sharedUserDefaults valueForKey:@"SharedExtension"];
-                else
-                    arrSites = [[NSMutableArray alloc] init];
-                NSDictionary *dictSite = [NSDictionary dictionaryWithObjectsAndKeys:self.contentText, @"Text", url.absoluteString, @"URL",nil];
-                
-                
-                
-                
-                
-                [arrSites addObject:dictSite];
-                [sharedUserDefaults setObject:arrSites forKey:@"SharedExtension"];
-                [sharedUserDefaults synchronize];
-                UIAlertController * alert= [UIAlertController
-                                            alertControllerWithTitle:@"Success"
-                                            message:@"Posted Successfully."
-                                            preferredStyle:UIAlertControllerStyleAlert];
-                UIAlertAction* ok = [UIAlertAction
-                                     actionWithTitle:@"OK"
-                                     style:UIAlertActionStyleDefault
-                                     handler:^(UIAlertAction * action)
-                {
-                    [UIView animateWithDuration:0.20 animations:^
+                if ([val isEqualToString:@"public.image"]) {
+               
+                    UIImage *sharedImage = nil;
+                    if([(NSObject*)item2 isKindOfClass:[UIImage class]])
                     {
-                        self.view.transform = CGAffineTransformMakeTranslation(0, self.view.frame.size.height);
+                        sharedImage = (UIImage*)item2;
+                        NSData *imageData = UIImagePNGRepresentation(sharedImage);
+                        NSLog(@"%@",imageData);
+                        NSLog(@"2");
+                        
+                        NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:AppGroupId];
+                        [shared setObject:imageData forKey:@"data"];
+                        [shared setObject:@"image" forKey:@"type"];
+                        [shared setObject:item2 forKey:@"url"];
+                        [shared synchronize];
+                        [self invokeApp:[NSString stringWithFormat:@"%@",item2]];
                     }
-                                     completion:^(BOOL finished)
+                    if([(NSObject*)item2 isKindOfClass:[NSURL class]])
                     {
-                        [self.extensionContext completeRequestReturningItems:nil completionHandler:nil];
-                    }];
-                }];
-                [alert addAction:ok];
-                [self presentViewController:alert animated:YES completion:nil];
-            }
-        }];
-    }
-    for (NSItemProvider* itemProvider in ((NSExtensionItem*)self.extensionContext.inputItems[0]).attachments )
-    {
-        if([itemProvider hasItemConformingToTypeIdentifier:@"public.url"])
-        {
-            [itemProvider loadItemForTypeIdentifier:@"public.url" options:nil completionHandler:
-             ^(id<NSSecureCoding> itema, NSError *error)
-             {
-                 NSLog(@"%@",itema);
-                 
-                 NSData *data1 = [NSData dataWithContentsOfURL:(NSURL*)itema];                 NSLog(@"%@",data1);
+                        NSLog(@"1");
+                        sharedImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:(NSURL*)item2]];
+                    }
+                }else{
+                    NSString *str = [NSString stringWithFormat:@"%@",item2];
+                    NSString *typeStr = [self mimeTypeForFileAtPath:[NSURL URLWithString:str]];
+                    NSData *pdfData = [[NSData alloc] initWithContentsOfURL:[
+                                                                             NSURL URLWithString:str]];
+                    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:AppGroupId];
+                    [shared setObject:pdfData forKey:@"data"];
+                    [shared setObject:typeStr forKey:@"type"];
+                    [shared setObject:str forKey:@"url"];
+                    [shared synchronize];
+                    [self invokeApp:str];
+                    NSLog(@"%@",pdfData);
+                   
+                    
+                }
                 
-                 
-             }];
+            }];
+        }
+    
+    
 
-        }
-        if([itemProvider hasItemConformingToTypeIdentifier:@"public.image"])
-        {
-            [itemProvider loadItemForTypeIdentifier:@"public.image" options:nil completionHandler:
-             ^(id<NSSecureCoding> item, NSError *error)
-             {
-                 UIImage *sharedImage = nil;
-                 if([(NSObject*)item isKindOfClass:[NSURL class]])
-                 {
-                     NSLog(@"1");
-                     sharedImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:(NSURL*)item]];
-                 }
-                 if([(NSObject*)item isKindOfClass:[UIImage class]])
-                 {
-                     NSLog(@"2");
-                     sharedImage = (UIImage*)item;
-                 }
-             }];
-        }
+    // ↓ this is the wrong location ↓
+    
+}
+- (NSString*) mimeTypeForFileAtPath: (NSURL *) path {
+    
+    // Borrowed from http://stackoverflow.com/questions/5996797/determine-mime-type-of-nsdata-loaded-from-a-file
+    // itself, derived from  http://stackoverflow.com/questions/2439020/wheres-the-iphone-mime-type-database
+    
+    CFStringRef UTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, (__bridge CFStringRef)[path pathExtension], NULL);
+    CFStringRef mimeType = UTTypeCopyPreferredTagWithClass (UTI, kUTTagClassMIMEType);
+    
+    if (!mimeType) {
+        //return @"application/octet-stream";
+        return  @"";
     }
-   [self.extensionContext completeRequestReturningItems:nil completionHandler:nil];
+    return [NSString stringWithFormat:@"%@",mimeType];
+    //return NSMakeCollectable((NSString *)mimeType) ;
+}
+
+- ( void ) invokeApp: ( NSString * ) invokeArgs
+{
+    // Prepare the URL request
+    // this will use the custom url scheme of your app
+    // and the paths to the photos you want to share:
+    NSString * urlString = [ NSString stringWithFormat: @"%@://%@", APP_SHARE_URL_SCHEME, ( NULL == invokeArgs ? @"" : invokeArgs ) ];
+    NSURL * url = [ NSURL URLWithString: urlString ];
+    
+    NSString *className = @"UIApplication";
+    if ( NSClassFromString( className ) )
+    {
+        id object = [ NSClassFromString( className ) performSelector: @selector( sharedApplication ) ];
+        [ object performSelector: @selector( openURL: ) withObject: url ];
+    }
+    
+    // Now let the host app know we are done, so that it unblocks its UI:
+    [ super didSelectPost ];
 }
 
 - (NSArray *)configurationItems {
-    item = [[SLComposeSheetConfigurationItem alloc] init];
-    // Give your configuration option a title.
-    [item setTitle:@"Item One"];
-    // Give it an initial value.
-    [item setValue:@"None"];
-    // Handle what happens when a user taps your option.
-    [item setTapHandler:^(void){
-    }];
-    // Return an array containing your item.
-    return @[item];
+   
+    return @[];
 }
 
 @end
