@@ -19,11 +19,12 @@
 {
     NSMutableArray *arrSites;
     NSUserDefaults *sharedUserDefaults;
+    UINavigationController *nav;
 }
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) NSString *prevAddress;
 @property (strong, nonatomic) BrowserViewController *viewController;
-
+@property (strong, nonatomic) UINavigationController *navigator;
 
 
 @end

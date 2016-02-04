@@ -40,6 +40,36 @@
 		D9BE2F611BE732B300222827 /* TAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BE2F601BE732B300222827 /* TAlertView.m */; };
 		D9BE2F641BE732DB00222827 /* UIView+MaterialDesign.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BE2F631BE732DB00222827 /* UIView+MaterialDesign.m */; };
 		D9BE2F661BE7341200222827 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9BE2F651BE7341200222827 /* QuartzCore.framework */; };
+		D9BEB8041C4CFC5300D87534 /* serverUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB8021C4CFC5300D87534 /* serverUploadViewController.m */; };
+		D9BEB8051C4CFC5300D87534 /* serverUploadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BEB8031C4CFC5300D87534 /* serverUploadViewController.xib */; };
+		D9BEB8431C4D09F600D87534 /* APIRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB8081C4D09F600D87534 /* APIRequest.m */; };
+		D9BEB8441C4D09F600D87534 /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB80A1C4D09F600D87534 /* DejalActivityView.m */; };
+		D9BEB8451C4D09F600D87534 /* LRResty.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB80D1C4D09F600D87534 /* LRResty.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D9BEB8461C4D09F600D87534 /* LRRestyClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB80F1C4D09F600D87534 /* LRRestyClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D9BEB8471C4D09F600D87534 /* LRRestyClient+DELETE.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB8111C4D09F600D87534 /* LRRestyClient+DELETE.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D9BEB8481C4D09F600D87534 /* LRRestyClient+GET.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB8131C4D09F600D87534 /* LRRestyClient+GET.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D9BEB8491C4D09F600D87534 /* LRRestyClient+POST.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB8151C4D09F600D87534 /* LRRestyClient+POST.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D9BEB84A1C4D09F600D87534 /* LRRestyClient+PUT.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB8171C4D09F600D87534 /* LRRestyClient+PUT.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D9BEB84B1C4D09F600D87534 /* LRRestyClientBlockDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB8191C4D09F600D87534 /* LRRestyClientBlockDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D9BEB84C1C4D09F600D87534 /* LRRestyClientProxyDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB81C1C4D09F600D87534 /* LRRestyClientProxyDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D9BEB84D1C4D09F600D87534 /* LRRestyClientStreamingDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB81F1C4D09F600D87534 /* LRRestyClientStreamingDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D9BEB84E1C4D09F600D87534 /* LRRestyHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB8211C4D09F600D87534 /* LRRestyHTTPClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D9BEB84F1C4D09F600D87534 /* LRRestyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB8231C4D09F600D87534 /* LRRestyRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D9BEB8501C4D09F600D87534 /* LRRestyRequestPayload.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB8271C4D09F600D87534 /* LRRestyRequestPayload.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D9BEB8511C4D09F600D87534 /* LRRestyResource.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB8291C4D09F600D87534 /* LRRestyResource.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D9BEB8521C4D09F600D87534 /* LRRestyResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB82C1C4D09F600D87534 /* LRRestyResponse.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D9BEB8531C4D09F600D87534 /* LRSynchronousProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB8301C4D09F600D87534 /* LRSynchronousProxy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D9BEB8541C4D09F600D87534 /* LRURLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB8321C4D09F600D87534 /* LRURLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D9BEB8551C4D09F600D87534 /* NSArray+RemoveNull.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB8341C4D09F600D87534 /* NSArray+RemoveNull.m */; };
+		D9BEB8561C4D09F600D87534 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB8361C4D09F600D87534 /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D9BEB8571C4D09F600D87534 /* NSDictionary+QueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB8381C4D09F600D87534 /* NSDictionary+QueryString.m */; };
+		D9BEB8581C4D09F600D87534 /* NSDictionary+RemoveNull.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB83A1C4D09F600D87534 /* NSDictionary+RemoveNull.m */; };
+		D9BEB8591C4D09F600D87534 /* NSObject+Tap.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB83C1C4D09F600D87534 /* NSObject+Tap.m */; };
+		D9BEB85A1C4D09F600D87534 /* NSRunLoop+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB83E1C4D09F600D87534 /* NSRunLoop+Additions.m */; };
+		D9BEB85B1C4D09F600D87534 /* NSString+QueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB8401C4D09F600D87534 /* NSString+QueryString.m */; };
+		D9BEB85C1C4D09F600D87534 /* NSURL+QueryInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB8421C4D09F600D87534 /* NSURL+QueryInspector.m */; };
+		D9BEB8601C4D0C0500D87534 /* KGModal.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEB85F1C4D0C0500D87534 /* KGModal.m */; };
+		D9BEB8621C4D165300D87534 /* dropdown-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D9BEB8611C4D165300D87534 /* dropdown-arrow.png */; };
 		FAA4557418A19A2E00B1BDF4 /* gsearch.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA4557118A19A2E00B1BDF4 /* gsearch.png */; };
 		FAA4557518A19A2E00B1BDF4 /* magglass.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA4557218A19A2E00B1BDF4 /* magglass.png */; };
 		FAA4557618A19A2E00B1BDF4 /* tab_add.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA4557318A19A2E00B1BDF4 /* tab_add.png */; };
@@ -158,6 +188,72 @@
 		D9BE2F621BE732DB00222827 /* UIView+MaterialDesign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MaterialDesign.h"; sourceTree = "<group>"; };
 		D9BE2F631BE732DB00222827 /* UIView+MaterialDesign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MaterialDesign.m"; sourceTree = "<group>"; };
 		D9BE2F651BE7341200222827 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D9BEB8011C4CFC5300D87534 /* serverUploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = serverUploadViewController.h; sourceTree = "<group>"; };
+		D9BEB8021C4CFC5300D87534 /* serverUploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = serverUploadViewController.m; sourceTree = "<group>"; };
+		D9BEB8031C4CFC5300D87534 /* serverUploadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = serverUploadViewController.xib; sourceTree = "<group>"; };
+		D9BEB8071C4D09F600D87534 /* APIRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIRequest.h; sourceTree = "<group>"; };
+		D9BEB8081C4D09F600D87534 /* APIRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIRequest.m; sourceTree = "<group>"; };
+		D9BEB8091C4D09F600D87534 /* DejalActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DejalActivityView.h; sourceTree = "<group>"; };
+		D9BEB80A1C4D09F600D87534 /* DejalActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DejalActivityView.m; sourceTree = "<group>"; };
+		D9BEB80B1C4D09F600D87534 /* ISRemoveNull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISRemoveNull.h; sourceTree = "<group>"; };
+		D9BEB80C1C4D09F600D87534 /* LRResty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRResty.h; sourceTree = "<group>"; };
+		D9BEB80D1C4D09F600D87534 /* LRResty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRResty.m; sourceTree = "<group>"; };
+		D9BEB80E1C4D09F600D87534 /* LRRestyClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyClient.h; sourceTree = "<group>"; };
+		D9BEB80F1C4D09F600D87534 /* LRRestyClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRRestyClient.m; sourceTree = "<group>"; };
+		D9BEB8101C4D09F600D87534 /* LRRestyClient+DELETE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LRRestyClient+DELETE.h"; sourceTree = "<group>"; };
+		D9BEB8111C4D09F600D87534 /* LRRestyClient+DELETE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LRRestyClient+DELETE.m"; sourceTree = "<group>"; };
+		D9BEB8121C4D09F600D87534 /* LRRestyClient+GET.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LRRestyClient+GET.h"; sourceTree = "<group>"; };
+		D9BEB8131C4D09F600D87534 /* LRRestyClient+GET.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LRRestyClient+GET.m"; sourceTree = "<group>"; };
+		D9BEB8141C4D09F600D87534 /* LRRestyClient+POST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LRRestyClient+POST.h"; sourceTree = "<group>"; };
+		D9BEB8151C4D09F600D87534 /* LRRestyClient+POST.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LRRestyClient+POST.m"; sourceTree = "<group>"; };
+		D9BEB8161C4D09F600D87534 /* LRRestyClient+PUT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LRRestyClient+PUT.h"; sourceTree = "<group>"; };
+		D9BEB8171C4D09F600D87534 /* LRRestyClient+PUT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LRRestyClient+PUT.m"; sourceTree = "<group>"; };
+		D9BEB8181C4D09F600D87534 /* LRRestyClientBlockDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyClientBlockDelegate.h; sourceTree = "<group>"; };
+		D9BEB8191C4D09F600D87534 /* LRRestyClientBlockDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRRestyClientBlockDelegate.m; sourceTree = "<group>"; };
+		D9BEB81A1C4D09F600D87534 /* LRRestyClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyClientDelegate.h; sourceTree = "<group>"; };
+		D9BEB81B1C4D09F600D87534 /* LRRestyClientProxyDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyClientProxyDelegate.h; sourceTree = "<group>"; };
+		D9BEB81C1C4D09F600D87534 /* LRRestyClientProxyDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRRestyClientProxyDelegate.m; sourceTree = "<group>"; };
+		D9BEB81D1C4D09F600D87534 /* LRRestyClientResponseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyClientResponseDelegate.h; sourceTree = "<group>"; };
+		D9BEB81E1C4D09F600D87534 /* LRRestyClientStreamingDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyClientStreamingDelegate.h; sourceTree = "<group>"; };
+		D9BEB81F1C4D09F600D87534 /* LRRestyClientStreamingDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRRestyClientStreamingDelegate.m; sourceTree = "<group>"; };
+		D9BEB8201C4D09F600D87534 /* LRRestyHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyHTTPClient.h; sourceTree = "<group>"; };
+		D9BEB8211C4D09F600D87534 /* LRRestyHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRRestyHTTPClient.m; sourceTree = "<group>"; };
+		D9BEB8221C4D09F600D87534 /* LRRestyRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyRequest.h; sourceTree = "<group>"; };
+		D9BEB8231C4D09F600D87534 /* LRRestyRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRRestyRequest.m; sourceTree = "<group>"; };
+		D9BEB8241C4D09F600D87534 /* LRRestyRequest+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LRRestyRequest+Internal.h"; sourceTree = "<group>"; };
+		D9BEB8251C4D09F600D87534 /* LRRestyRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyRequestDelegate.h; sourceTree = "<group>"; };
+		D9BEB8261C4D09F600D87534 /* LRRestyRequestPayload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyRequestPayload.h; sourceTree = "<group>"; };
+		D9BEB8271C4D09F600D87534 /* LRRestyRequestPayload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRRestyRequestPayload.m; sourceTree = "<group>"; };
+		D9BEB8281C4D09F600D87534 /* LRRestyResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyResource.h; sourceTree = "<group>"; };
+		D9BEB8291C4D09F600D87534 /* LRRestyResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRRestyResource.m; sourceTree = "<group>"; };
+		D9BEB82A1C4D09F600D87534 /* LRRestyResourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyResourceDelegate.h; sourceTree = "<group>"; };
+		D9BEB82B1C4D09F600D87534 /* LRRestyResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyResponse.h; sourceTree = "<group>"; };
+		D9BEB82C1C4D09F600D87534 /* LRRestyResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRRestyResponse.m; sourceTree = "<group>"; };
+		D9BEB82D1C4D09F600D87534 /* LRRestyResponse+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LRRestyResponse+Internal.h"; sourceTree = "<group>"; };
+		D9BEB82E1C4D09F600D87534 /* LRRestyTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRestyTypes.h; sourceTree = "<group>"; };
+		D9BEB82F1C4D09F600D87534 /* LRSynchronousProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRSynchronousProxy.h; sourceTree = "<group>"; };
+		D9BEB8301C4D09F600D87534 /* LRSynchronousProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRSynchronousProxy.m; sourceTree = "<group>"; };
+		D9BEB8311C4D09F600D87534 /* LRURLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRURLRequestOperation.h; sourceTree = "<group>"; };
+		D9BEB8321C4D09F600D87534 /* LRURLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRURLRequestOperation.m; sourceTree = "<group>"; };
+		D9BEB8331C4D09F600D87534 /* NSArray+RemoveNull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+RemoveNull.h"; sourceTree = "<group>"; };
+		D9BEB8341C4D09F600D87534 /* NSArray+RemoveNull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+RemoveNull.m"; sourceTree = "<group>"; };
+		D9BEB8351C4D09F600D87534 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		D9BEB8361C4D09F600D87534 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		D9BEB8371C4D09F600D87534 /* NSDictionary+QueryString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+QueryString.h"; sourceTree = "<group>"; };
+		D9BEB8381C4D09F600D87534 /* NSDictionary+QueryString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+QueryString.m"; sourceTree = "<group>"; };
+		D9BEB8391C4D09F600D87534 /* NSDictionary+RemoveNull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RemoveNull.h"; sourceTree = "<group>"; };
+		D9BEB83A1C4D09F600D87534 /* NSDictionary+RemoveNull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+RemoveNull.m"; sourceTree = "<group>"; };
+		D9BEB83B1C4D09F600D87534 /* NSObject+Tap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Tap.h"; sourceTree = "<group>"; };
+		D9BEB83C1C4D09F600D87534 /* NSObject+Tap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Tap.m"; sourceTree = "<group>"; };
+		D9BEB83D1C4D09F600D87534 /* NSRunLoop+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRunLoop+Additions.h"; sourceTree = "<group>"; };
+		D9BEB83E1C4D09F600D87534 /* NSRunLoop+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRunLoop+Additions.m"; sourceTree = "<group>"; };
+		D9BEB83F1C4D09F600D87534 /* NSString+QueryString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+QueryString.h"; sourceTree = "<group>"; };
+		D9BEB8401C4D09F600D87534 /* NSString+QueryString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QueryString.m"; sourceTree = "<group>"; };
+		D9BEB8411C4D09F600D87534 /* NSURL+QueryInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+QueryInspector.h"; sourceTree = "<group>"; };
+		D9BEB8421C4D09F600D87534 /* NSURL+QueryInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+QueryInspector.m"; sourceTree = "<group>"; };
+		D9BEB85E1C4D0C0500D87534 /* KGModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGModal.h; sourceTree = "<group>"; };
+		D9BEB85F1C4D0C0500D87534 /* KGModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGModal.m; sourceTree = "<group>"; };
+		D9BEB8611C4D165300D87534 /* dropdown-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dropdown-arrow.png"; sourceTree = "<group>"; };
 		FAA4557118A19A2E00B1BDF4 /* gsearch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gsearch.png; sourceTree = "<group>"; };
 		FAA4557218A19A2E00B1BDF4 /* magglass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = magglass.png; sourceTree = "<group>"; };
 		FAA4557318A19A2E00B1BDF4 /* tab_add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_add.png; sourceTree = "<group>"; };
@@ -282,6 +378,82 @@
 			name = alert;
 			sourceTree = "<group>";
 		};
+		D9BEB8061C4D09D500D87534 /* API Request */ = {
+			isa = PBXGroup;
+			children = (
+				D9BEB8071C4D09F600D87534 /* APIRequest.h */,
+				D9BEB8081C4D09F600D87534 /* APIRequest.m */,
+				D9BEB8091C4D09F600D87534 /* DejalActivityView.h */,
+				D9BEB80A1C4D09F600D87534 /* DejalActivityView.m */,
+				D9BEB80B1C4D09F600D87534 /* ISRemoveNull.h */,
+				D9BEB80C1C4D09F600D87534 /* LRResty.h */,
+				D9BEB80D1C4D09F600D87534 /* LRResty.m */,
+				D9BEB80E1C4D09F600D87534 /* LRRestyClient.h */,
+				D9BEB80F1C4D09F600D87534 /* LRRestyClient.m */,
+				D9BEB8101C4D09F600D87534 /* LRRestyClient+DELETE.h */,
+				D9BEB8111C4D09F600D87534 /* LRRestyClient+DELETE.m */,
+				D9BEB8121C4D09F600D87534 /* LRRestyClient+GET.h */,
+				D9BEB8131C4D09F600D87534 /* LRRestyClient+GET.m */,
+				D9BEB8141C4D09F600D87534 /* LRRestyClient+POST.h */,
+				D9BEB8151C4D09F600D87534 /* LRRestyClient+POST.m */,
+				D9BEB8161C4D09F600D87534 /* LRRestyClient+PUT.h */,
+				D9BEB8171C4D09F600D87534 /* LRRestyClient+PUT.m */,
+				D9BEB8181C4D09F600D87534 /* LRRestyClientBlockDelegate.h */,
+				D9BEB8191C4D09F600D87534 /* LRRestyClientBlockDelegate.m */,
+				D9BEB81A1C4D09F600D87534 /* LRRestyClientDelegate.h */,
+				D9BEB81B1C4D09F600D87534 /* LRRestyClientProxyDelegate.h */,
+				D9BEB81C1C4D09F600D87534 /* LRRestyClientProxyDelegate.m */,
+				D9BEB81D1C4D09F600D87534 /* LRRestyClientResponseDelegate.h */,
+				D9BEB81E1C4D09F600D87534 /* LRRestyClientStreamingDelegate.h */,
+				D9BEB81F1C4D09F600D87534 /* LRRestyClientStreamingDelegate.m */,
+				D9BEB8201C4D09F600D87534 /* LRRestyHTTPClient.h */,
+				D9BEB8211C4D09F600D87534 /* LRRestyHTTPClient.m */,
+				D9BEB8221C4D09F600D87534 /* LRRestyRequest.h */,
+				D9BEB8231C4D09F600D87534 /* LRRestyRequest.m */,
+				D9BEB8241C4D09F600D87534 /* LRRestyRequest+Internal.h */,
+				D9BEB8251C4D09F600D87534 /* LRRestyRequestDelegate.h */,
+				D9BEB8261C4D09F600D87534 /* LRRestyRequestPayload.h */,
+				D9BEB8271C4D09F600D87534 /* LRRestyRequestPayload.m */,
+				D9BEB8281C4D09F600D87534 /* LRRestyResource.h */,
+				D9BEB8291C4D09F600D87534 /* LRRestyResource.m */,
+				D9BEB82A1C4D09F600D87534 /* LRRestyResourceDelegate.h */,
+				D9BEB82B1C4D09F600D87534 /* LRRestyResponse.h */,
+				D9BEB82C1C4D09F600D87534 /* LRRestyResponse.m */,
+				D9BEB82D1C4D09F600D87534 /* LRRestyResponse+Internal.h */,
+				D9BEB82E1C4D09F600D87534 /* LRRestyTypes.h */,
+				D9BEB82F1C4D09F600D87534 /* LRSynchronousProxy.h */,
+				D9BEB8301C4D09F600D87534 /* LRSynchronousProxy.m */,
+				D9BEB8311C4D09F600D87534 /* LRURLRequestOperation.h */,
+				D9BEB8321C4D09F600D87534 /* LRURLRequestOperation.m */,
+				D9BEB8331C4D09F600D87534 /* NSArray+RemoveNull.h */,
+				D9BEB8341C4D09F600D87534 /* NSArray+RemoveNull.m */,
+				D9BEB8351C4D09F600D87534 /* NSData+Base64.h */,
+				D9BEB8361C4D09F600D87534 /* NSData+Base64.m */,
+				D9BEB8371C4D09F600D87534 /* NSDictionary+QueryString.h */,
+				D9BEB8381C4D09F600D87534 /* NSDictionary+QueryString.m */,
+				D9BEB8391C4D09F600D87534 /* NSDictionary+RemoveNull.h */,
+				D9BEB83A1C4D09F600D87534 /* NSDictionary+RemoveNull.m */,
+				D9BEB83B1C4D09F600D87534 /* NSObject+Tap.h */,
+				D9BEB83C1C4D09F600D87534 /* NSObject+Tap.m */,
+				D9BEB83D1C4D09F600D87534 /* NSRunLoop+Additions.h */,
+				D9BEB83E1C4D09F600D87534 /* NSRunLoop+Additions.m */,
+				D9BEB83F1C4D09F600D87534 /* NSString+QueryString.h */,
+				D9BEB8401C4D09F600D87534 /* NSString+QueryString.m */,
+				D9BEB8411C4D09F600D87534 /* NSURL+QueryInspector.h */,
+				D9BEB8421C4D09F600D87534 /* NSURL+QueryInspector.m */,
+			);
+			name = "API Request";
+			sourceTree = "<group>";
+		};
+		D9BEB85D1C4D0BF100D87534 /* KG Modal */ = {
+			isa = PBXGroup;
+			children = (
+				D9BEB85E1C4D0C0500D87534 /* KGModal.h */,
+				D9BEB85F1C4D0C0500D87534 /* KGModal.m */,
+			);
+			name = "KG Modal";
+			sourceTree = "<group>";
+		};
 		FAA4557718A19B2700B1BDF4 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +467,9 @@
 		FAC9B25116F27BF800E37710 = {
 			isa = PBXGroup;
 			children = (
+				D9BEB8611C4D165300D87534 /* dropdown-arrow.png */,
+				D9BEB85D1C4D0BF100D87534 /* KG Modal */,
+				D9BEB8061C4D09D500D87534 /* API Request */,
 				D95733D01C35128E0043DF54 /* DemoSharedCode.h */,
 				FAF75E8018A17A59007B317D /* Browser Resources */,
 				FAF75E6A18A179D1007B317D /* Browser */,
@@ -341,6 +516,9 @@
 				D9BE2F561BE7315C00222827 /* firstViewController.h */,
 				D9BE2F571BE7315C00222827 /* firstViewController.m */,
 				D9BE2F581BE7315C00222827 /* firstViewController.xib */,
+				D9BEB8011C4CFC5300D87534 /* serverUploadViewController.h */,
+				D9BEB8021C4CFC5300D87534 /* serverUploadViewController.m */,
+				D9BEB8031C4CFC5300D87534 /* serverUploadViewController.xib */,
 				FAC9B26416F27BF800E37710 /* Supporting Files */,
 			);
 			path = TestBrowser;
@@ -544,6 +722,7 @@
 				FAF75EE518A17BFD007B317D /* bookmark.png in Resources */,
 				D9BE2F5D1BE7317600222827 /* setting.png in Resources */,
 				FAF75EA318A17A77007B317D /* import_bookmark_howto.html in Resources */,
+				D9BEB8051C4CFC5300D87534 /* serverUploadViewController.xib in Resources */,
 				D965B8201BE89A4A0075FE50 /* 500x500.png in Resources */,
 				FAF75EA718A17A77007B317D /* Bookmarks.xib in Resources */,
 				D9BE2F5A1BE7315C00222827 /* firstViewController.xib in Resources */,
@@ -573,6 +752,7 @@
 				D965B81B1BE89A4A0075FE50 /* 29x29.png in Resources */,
 				D965B8221BE89A4A0075FE50 /* 1024x1024 iOS-app-icon-template1.png in Resources */,
 				FAA4557918A19D9500B1BDF4 /* unable_to_connect.html in Resources */,
+				D9BEB8621C4D165300D87534 /* dropdown-arrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,24 +771,52 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9BEB8591C4D09F600D87534 /* NSObject+Tap.m in Sources */,
 				71ED23B819447163002ACD24 /* BrowserDelegate.m in Sources */,
+				D9BEB85A1C4D09F600D87534 /* NSRunLoop+Additions.m in Sources */,
+				D9BEB85C1C4D09F600D87534 /* NSURL+QueryInspector.m in Sources */,
+				D9BEB8451C4D09F600D87534 /* LRResty.m in Sources */,
+				D9BEB84E1C4D09F600D87534 /* LRRestyHTTPClient.m in Sources */,
+				D9BEB84C1C4D09F600D87534 /* LRRestyClientProxyDelegate.m in Sources */,
+				D9BEB8531C4D09F600D87534 /* LRSynchronousProxy.m in Sources */,
+				D9BEB8601C4D0C0500D87534 /* KGModal.m in Sources */,
 				B572E55D18D08D2A005E4834 /* BookmarkImporter.m in Sources */,
+				D9BEB8431C4D09F600D87534 /* APIRequest.m in Sources */,
 				D9BE2F641BE732DB00222827 /* UIView+MaterialDesign.m in Sources */,
 				B572E55918D08D2A005E4834 /* BookmarksFormController.m in Sources */,
 				B572E55E18D08D2A005E4834 /* BookmarkItem.m in Sources */,
 				D9BE2F611BE732B300222827 /* TAlertView.m in Sources */,
+				D9BEB8491C4D09F600D87534 /* LRRestyClient+POST.m in Sources */,
 				FAF75EA818A17A77007B317D /* BrowserModel.xcdatamodeld in Sources */,
+				D9BEB8521C4D09F600D87534 /* LRRestyResponse.m in Sources */,
+				D9BEB84F1C4D09F600D87534 /* LRRestyRequest.m in Sources */,
+				D9BEB84B1C4D09F600D87534 /* LRRestyClientBlockDelegate.m in Sources */,
 				B5A210C218D091F700D65141 /* Reachability.m in Sources */,
 				B572E55718D08D2A005E4834 /* Tab.m in Sources */,
+				D9BEB8551C4D09F600D87534 /* NSArray+RemoveNull.m in Sources */,
+				D9BEB8481C4D09F600D87534 /* LRRestyClient+GET.m in Sources */,
+				D9BEB8571C4D09F600D87534 /* NSDictionary+QueryString.m in Sources */,
+				D9BEB8441C4D09F600D87534 /* DejalActivityView.m in Sources */,
 				FAF75EE218A17BFD007B317D /* BrowserModel.xcdatamodeld in Sources */,
 				FAC9B26A16F27BF800E37710 /* main.m in Sources */,
+				D9BEB8501C4D09F600D87534 /* LRRestyRequestPayload.m in Sources */,
 				FAC9B26E16F27BF800E37710 /* AppDelegate.m in Sources */,
 				B572E55B18D08D2A005E4834 /* UIMainView.m in Sources */,
 				D9BE2F591BE7315C00222827 /* firstViewController.m in Sources */,
 				B572E55818D08D2A005E4834 /* BookmarksController.m in Sources */,
 				B572E55A18D08D2A005E4834 /* BrowserViewController.m in Sources */,
+				D9BEB85B1C4D09F600D87534 /* NSString+QueryString.m in Sources */,
 				FAC9B27716F27BF800E37710 /* ViewController.m in Sources */,
+				D9BEB8581C4D09F600D87534 /* NSDictionary+RemoveNull.m in Sources */,
+				D9BEB8511C4D09F600D87534 /* LRRestyResource.m in Sources */,
 				FAF75EED18A17BFD007B317D /* JSTools.js in Sources */,
+				D9BEB8041C4CFC5300D87534 /* serverUploadViewController.m in Sources */,
+				D9BEB84D1C4D09F600D87534 /* LRRestyClientStreamingDelegate.m in Sources */,
+				D9BEB8541C4D09F600D87534 /* LRURLRequestOperation.m in Sources */,
+				D9BEB8461C4D09F600D87534 /* LRRestyClient.m in Sources */,
+				D9BEB8471C4D09F600D87534 /* LRRestyClient+DELETE.m in Sources */,
+				D9BEB8561C4D09F600D87534 /* NSData+Base64.m in Sources */,
+				D9BEB84A1C4D09F600D87534 /* LRRestyClient+PUT.m in Sources */,
 				B572E55C18D08D2A005E4834 /* BookmarkFolderFormController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

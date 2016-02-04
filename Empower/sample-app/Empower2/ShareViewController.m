@@ -30,6 +30,7 @@ static NSString *const APP_SHARE_URL_SCHEME = @"com.empower";
 {
     sharedUserDefaults = [[NSUserDefaults alloc] initWithSuiteName:AppGroupId];
     // here you must have to provide your app group id that you already created
+    [self didSelectPost];
 }
 
 - (void)didSelectPost {
@@ -124,10 +125,14 @@ static NSString *const APP_SHARE_URL_SCHEME = @"com.empower";
     {
         id object = [ NSClassFromString( className ) performSelector: @selector( sharedApplication ) ];
         [ object performSelector: @selector( openURL: ) withObject: url ];
+        
+        //gave control back to previous shareed view
+        [self.extensionContext completeRequestReturningItems:nil completionHandler:nil];
+
     }
     
     // Now let the host app know we are done, so that it unblocks its UI:
-    [ super didSelectPost ];
+ //   [ super didSelectPost ];
 }
 
 - (NSArray *)configurationItems {

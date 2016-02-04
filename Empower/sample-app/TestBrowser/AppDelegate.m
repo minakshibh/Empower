@@ -12,6 +12,7 @@
 
 #import "AppDelegate.h"
 #import "BrowserViewController.h"
+#import "serverUploadViewController.h"
 
 static NSString *const AppGroupId = @"group.empowerExtention";
 @implementation AppDelegate
@@ -36,7 +37,7 @@ static NSString *const AppGroupId = @"group.empowerExtention";
         
     }
     
-    
+   
     
 //    viewController = [[BrowserViewController alloc]initWithNibName:@"SecondViewController" bundle:nil];
 //    UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:FVC];
@@ -50,7 +51,7 @@ static NSString *const AppGroupId = @"group.empowerExtention";
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.viewController = [[BrowserViewController alloc] init];
-    UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:self.viewController];
+    nav=[[UINavigationController alloc]initWithRootViewController:self.viewController];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     
@@ -58,7 +59,10 @@ static NSString *const AppGroupId = @"group.empowerExtention";
     sharedUserDefaults = [[NSUserDefaults alloc] initWithSuiteName:AppGroupId];
     arrSites = [NSMutableArray arrayWithArray:[sharedUserDefaults valueForKey:@"SharedExtension"]];
     
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receiveTestNotification:)
+                                                 name:@"TestNotification"
+                                               object:nil];
     
     return YES;
 }
@@ -98,10 +102,28 @@ static NSString *const AppGroupId = @"group.empowerExtention";
     NSLog(@"url path: %@", [url path]);
     
     
+    
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    BrowserViewController *rootVC = [[BrowserViewController alloc]init];
+    self.navigator = [[UINavigationController alloc] initWithRootViewController:rootVC];
+    self.window.rootViewController = self.navigator;
+    [self.window makeKeyAndVisible];
 
+    
+    serverUploadViewController *serverUpload = [[serverUploadViewController alloc]initWithNibName:@"serverUploadViewController" bundle:nil];
+    [self.navigator presentViewController:serverUpload animated:NO completion:nil];
     return YES;
 }
+- (void) receiveTestNotification:(NSNotification *) notification
+{
+    // [notification name] should always be @"TestNotification"
+    // unless you use this method for observation of other notifications
+    // as well.
+    
+    
 
+}
 
 
 

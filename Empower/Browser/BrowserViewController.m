@@ -63,7 +63,7 @@ typedef enum ScrollDirection {
     i=0;
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
 //    [user removeObjectForKey:@"URL"];
-    [user setObject:@"https://educate.adams50.org/Educate/iFrame.aspx?iCtrl=PLAYLIST_HOME_CLASS" forKey:@"URL"];
+//    [user setObject:@"https://educate.adams50.org/Educate/iFrame.aspx?iCtrl=PLAYLIST_HOME_CLASS" forKey:@"URL"];
     
    // @"https://educate.adams50.org/Educate/iFrame.aspx?iCtrl=PLAYLIST_HOME_CLASS";
     

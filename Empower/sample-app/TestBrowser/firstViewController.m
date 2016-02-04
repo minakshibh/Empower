@@ -21,7 +21,7 @@
     //---yes this is
     [super viewDidLoad];
     
-    [[self navigationController] setNavigationBarHidden:YES animated:YES];
+//    [[self navigationController] setNavigationBarHidden:YES animated:YES];
     
     
     //--hide navigation bar
